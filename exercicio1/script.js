@@ -1,5 +1,9 @@
-const num = //seu numero aqui
+const verificaParidade = (num) => {
+  if (num % 2 == 0) {
+    console.log("O número é par.");
+  }
+};
 
-if(){
-    console.log("sua mensagem aqui");
-}
+const num = 4;
+
+verificaParidade(num);
