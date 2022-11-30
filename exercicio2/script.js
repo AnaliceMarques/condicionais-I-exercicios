@@ -1,26 +1,29 @@
+function verificaEscolaridade(valorIdade, booleanEnsMed, booleanFaculdade) {
+  if (valorIdade >= 18) {
+    console.log("A pessoa é maior de idade.");
+  } else {
+    console.log("A pessoa é menor de idade.");
+  }
+
+  if (booleanEnsMed) {
+    console.log("A pessoa terminou o ensino médio.");
+  } else {
+    console.log("A pessoa não terminou o ensino médio.");
+  }
+
+  if (!booleanFaculdade) {
+    console.log("A pessoa não está cursando faculdade.");
+  } else {
+    console.log("A pessoa está cursando faculdade.");
+  }
+}
+
 let idade = Number(prompt("Qual a sua idade?"));
-let terminouEnsinoMedio = prompt(
-  'Você já terminou o ensino médio? \nResponda "true" para sim e "false" para não.'
+let terminouEnsinoMedio = confirm(
+  'Você já terminou o ensino médio? \nAperte "Ok" para sim e "Cancelar" para não.'
 );
-let cursandoFaculdade = prompt(
-  `Você não está cursando alguma faculdade? \nResponda "true" para confirmar e "false" para negar.`
+let cursandoFaculdade = confirm(
+  `Você está cursando alguma faculdade? \nAperte "Ok" para sim e "Cancelar" para não.`
 );
 
-if (idade >= 18) {
-  console.log("A pessoa é maior de idade.");
-} else {
-  console.log("A pessoa é menor de idade.");
-}
-
-//Não está reconhecendo o true sem ser com as aspas.
-if (terminouEnsinoMedio == "true") {
-  console.log("A pessoa terminou o ensino médio.");
-} else {
-  console.log("A pessoa não terminou o ensino médio.");
-}
-
-if (cursandoFaculdade == "true") {
-  console.log("A pessoa não está cursando faculdade.");
-} else {
-  console.log("A pessoa está cursando faculdade.");
-}
+verificaEscolaridade(idade, terminouEnsinoMedio, cursandoFaculdade);
